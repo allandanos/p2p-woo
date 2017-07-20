@@ -2,6 +2,8 @@ import React from 'react';
 import Expo from "expo";
 import { Container, Content, Form, Item, Input, Label, List, ListItem, Text } from 'native-base';
 
+import AppBase from "./src/app/app";
+
 export default class App extends React.Component {
   constructor() {
     super();
@@ -25,29 +27,7 @@ export default class App extends React.Component {
     }
     return (
       <Container>
-        <Content>
-          <Form>
-            <Item stackedLabel>
-              <Label>Username</Label>
-              <Input />
-            </Item>
-            <Item stackedLabel last>
-              <Label>Password</Label>
-              <Input />
-            </Item>
-          </Form>
-          <List>
-            <ListItem>
-              <Text>Simon Mignolet</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Nathaniel Clyne</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Dejan Lovren</Text>
-            </ListItem>
-          </List>
-        </Content>
+        <AppBase />
       </Container>
     );
   }
